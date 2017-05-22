@@ -1,6 +1,6 @@
 @import url(tree.css);
 
-body {margin:0px;padding:1em 1em 2.8em;font-family:Tahoma,arial,simsun;font-size:14px;background-color:#fafaff;}
+body {margin:0px;padding:1em 1em 2.8em;font-size:14px;background-color:#fafaff;}
 div,form,img,ol,dl,dt,dd,fieldset {margin:0;padding:0;border:0;}
 h1,h2,h3,h4,h5,h6,p {margin:0;padding:0;font-size:1em;}
 ul,ol,li {margin:0;padding:0;list-style:none;}
@@ -13,7 +13,7 @@ html {
 }
 /**/
 #jsonNav {height@:100%;}
-#panel {padding:12px 2px 12px 12px;width:512px;height:80%;@min-height:300px;position:fixed;z-index:10;right:1em;top:1em;border:1px solid #C8C8C8;border-color:#e7e7f3 #c8c8d8 #c8c8d8 #e7e7f3;background:#f3f5ff;box-shadow:4px 4px 9px rgba(0, 0, 50, 0.2), -3px -3px 30px rgba(88, 88, 188, 0.1) inset;
+#panel {padding:30px;width:512px;height:80%;@min-height:300px;position:fixed;z-index:10;right:1em;top:1em;solid #C8C8C8;background:#373737;box-shadow:4px 4px 9px rgba(0, 0, 50, 0.2), -3px -3px 30px rgba(88, 88, 188, 0.1) inset;
 	transition:
 		height .2s ease-out
 		,width .2s ease-out
@@ -35,22 +35,22 @@ a#showLink:hover, a#showLink:active {color:#577cff;text-decoration:none;}
 #panel.min #valueAct {display@:none;opacity:0;height:1px;overflow:hidden;}
 #saveBtn {float:left;}
 #undoBtn {margin-left:4em;}
-#undoBtn, #redoBtn {float:left;font-family:Tahoma,arial,simsun;}
-#showPath {width:420px;background-color:#e3e4e9;}
-#showKey {width:200px;background-color:#e3e4e9;}
+#undoBtn, #redoBtn {float:left;font-family:-apple-system,arial,simsun;}
+#showPath {width:443px;background-color:#e3e4e9;}
+#showKey {width:394px;background-color:#e3e4e9;}
 #showKey.isArrayElm {}
 #showKey.isArrayElm~span {visibility:hidden;}
 .lableInput #showKey~span {font-weight:bold;}
-#showValue {outline:0;width:462px;min-height:270px;padding:10px 12px;border:1px solid #b6b6c4;border-right-color:#eef;border-bottom-color:#eef;border-radius:2px;font-family:Tahoma,arial,simsun;box-shadow:1px 1px 6px rgba(33, 33, 98, .16) inset;}
+#showValue {width: 100%;outline:0;min-height:270px;padding:12px;border:0;border-right-color:#eef;border-bottom-color:#eef;border-radius:2px;font-family:monospace,arial,simsun;box-shadow:1px 1px 6px rgba(33, 33, 98, .16) inset;}
 #showValue:focus {box-shadow:1px 1px 12px rgba(53, 53, 118, .26) inset;border:1px solid #d0d0ed;border-right-color:#ddf;border-bottom-color:#ddf;}
 .inputTitle {display:inline-block;width:4em;margin:0 0 1em;}
 #pathTips {height:1.5em;line-height:1.6em;width:100%;position:fixed;z-index:15;left:0;bottom:0;background-color:#eee;color:#666;padding:0.2em 1em 0;border-top:1px solid #fff;}
-button {border-radius:2px;margin:0.5em 0 0;font-family:Tahoma,arial,simsun;border-width: 1px;padding: 1px 8px 3px;}
+button {color: white;background: #109ed6; border:0; border-radius:2px;margin:0.5em 0 0;font-family:-apple-system,arial,simsun;padding: 6px;}
 #msgBox {color:red;font-size:12px;font-weight:bold;height:38px;line-height:14px;padding-right:24px;padding-top:5px;text-align:right;}
-.textInpub {padding:3px 6px;border-radius:2px;font-family:Tahoma,arial,simsun;}
+.textInpub {border:0; padding:6px;border-radius:2px;font-family:-apple-system,arial,simsun;}
 #mask {z-index:20;position:absolute;left:0;top:0;background-color:rgba(101, 123, 190,0.3);width:100%;height:100%;}
 #enterInputDialog {position:absolute;left:50%;top:50%;margin:-170px 0 0 -280px;padding:20px;width:560px;height:340px;text-align:right;border-radius:6px;box-shadow: 6px 5px 7px rgba(50, 50, 50, 0.4);background-color:#fafaff;border:1px solid #e8e8e8;}
-#enterValue {width:530px;height:265px;margin:5px 0 0;border-radius:2px;padding:15px;box-shadow:1px 1px 10px rgba(88, 88, 188, 0.18) inset;border-color:#888 #ddd #ddd #888;font-family:Tahoma,arial,simsun;}
+#enterValue {width:530px;height:265px;margin:5px 0 0;border-radius:2px;padding:15px;box-shadow:1px 1px 10px rgba(88, 88, 188, 0.18) inset;border-color:#888 #ddd #ddd #888;font-family:monospace;}
 #enterInputTips {text-align:left;line-height:1.5em;}
 .tools2 {padding:0 1em 0 0;text-align:right;}
 
@@ -244,15 +244,15 @@ button {border-radius:2px;margin:0.5em 0 0;font-family:Tahoma,arial,simsun;borde
 	display:block;
 	width:24px;
 	height:24px;
-	background:url(img/setting-btn.png) no-repeat 0 0;
+	background:url(img/setting-btn-act.png) no-repeat 0 0;
 	cursor:pointer;
 	outline:none;
 }
 .setting-btn:hover {
-	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAE/ElEQVRIS51VC2xTZRT+bm/brYwhG48xhCggOCPD8dJIILAAGh8JUQEDBCSgMAIaxZjAho+MiEwIZCPAcGEwRZ5DFEFhvByE53Qp7NmtgDDGunWUru199N7ee8xf29IuIwT+5Oa2ueec7/zfOec7HB5xiGgugFcB6AAcAPZzHHcDQOBRvuw7F21ERMkAegHwALgHIFXX8eXFKukDSdbNzFbT4Plk0cS3bNV/XwIwCAAP4A7Hcb6uACMARDQQwMx2tzbB7dWFhDhDaWpf/pkWpzan9qY8huh/dy2g4dxfR058uvi1fEu3p2Y472Og10dlI9Li1oVuGYMTBCCiHgAWtDi12Y1N/gxFJRPPc85ePQ0Oj6APlWWKj/YSBNGXlKhXGc2J6aJM3RmuvaGuYNuGjwus1ktN7H/YPgzQ29Whf1d9Q56nKBSk4nGPKAj6hm+X5pefLl0NwM3yjtSAiOKbHOqCxiZ1va6T5XGDM3tXeyut+mLG+ca6ykUA7ADUmCKzGlTUyNs6fNobTwLw0/a17r0l648qirwWAOsyid2CI6JuAMYAmNh6T82ssiuToruLiHC+/Ij/ysUTLgMgjM98p3vG6AkpRpMxpgML83POHNyTvzojI+OO1Wq9C0AMAyz1STTl32ZljMuj9VNUMkbfYFfx975D+zbXeDrunQDQkNw71bIy98eJ6SNemcUbDREQSZQU0qRbdvv1NZ8vyWS2zUGKiKiwvFL8UFWJ9XPMaay/GshdMbvK4bi1GcBlAPcZt2Vlp9N1y4idvCl+QKc5giSK2rTJKVkAdrC2ZQAbTl4WPuuK91PHD3gK8pb9IopCAYCW0AAqoii+W3Nd+8YtcC909vPLEt6e1Od3AHMYTQzg/ZOXhb1dAdRcu+LLzZ5V5Gpv3RKSCZGIUgEsqayVF7q8Wr/OfqLPi2lTUhlF81lzMYAexfuqi+PizW8mJ/eNN5lNEV5VRaWD+7fus1n/yMnLy+PGjRuXCOD1Fqc23XbbPzIQeECrJApobrJr584c9u7emXcUwCoAbSyYAcBgAMNKSmtn9ksdMM/ARxVPklUu4P1z6LNJzUlJCX0EmZ6/06am+RUyRWdfUrSmY9f2NVcBVAE4B+ACgPbwJJsFQZh+u1XNam7jx4N7ABAOQqQrRt7AaTpiAoe/b8nPth3aU7AJQFloBgQAvohUCFJgZc11db5H0JmiPvZx3G1S1+Uu3nzNepY1RBsAP9OkiNg1twaWNdxWvtb0J9MillHO8ukVVy4cWwigPkYqiMjwT52Y0tqu5fIGWsgbeU6WRNyw14qDhrwYZ+lmiZkRn6eDGmxWcfBzw+N7JvUKfvv1wA/SzzvWnne72nIAVEekIooLQ//+Q56e+9GqIk1Tx14o/83TaLtavyK3xDE8fex8A896AdA1DceP7haLt35VMTRtpGvUy5NHu11Oy+HSwhpJ8u0HcAoAkwpWA4rRk9B2GpCQkJgpCF6mqo0bN24yDRs156A5zhxUWY/bRTnL37PX11ZsA3AWQG8AbFk5AdSGpr0DgNIVQFhh2YJhAQ1ZWVlxaaNmZRvN/DxZ9JlsdZX+ok3ZxwDkA7jJOiXEAusutrflUHD2O3YnR9EVng/2Zk8KgKkAXgoV71ooe6ZNQSpC88TeLHBowT4coKs2ZSrLpD14s1CmLDij4qGncw0eZcsCs65hfmzvsieSbVfO/wGiC2pcTa6aSAAAAABJRU5ErkJggg==) no-repeat 0 0;
+	background:url(img/setting-btn.png) no-repeat 0 0;
 }
 .setting-btn:active {
-	background:url(img/setting-btn.png) no-repeat 0 0;
+	background:url(img/setting-btn-act.png) no-repeat 0 0;
 }
 
 .array-leng {
@@ -295,7 +295,7 @@ button {border-radius:2px;margin:0.5em 0 0;font-family:Tahoma,arial,simsun;borde
 .dark {background-color:#0e0900;}
 .dark body {background-color:transparent;}
 .dark #minBtn {color:#becaf5;}
-.dark #panel {background-color:#575a5d;border-color: #676a6d #474a4d #474a4d #676a6d;color:#dbe0f3;}
+.dark #panel {background-color:#423c3c;border:0;}
 .dark .treeNav .row:hover .elmBox{font-weight:bold;border-color:#394c63;}
 .dark .treeNav .elmBox {border-left:2px solid #0e0900;}
 .dark .treeNav {font-size:12px;}
